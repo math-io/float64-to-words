@@ -20,7 +20,7 @@ var words = require( 'math-float64-to-words' );
 
 #### words( x )
 
-Splits a [double-precision floating-point number][ieee754] into a lower order word and a higher order word.
+Splits a [double-precision floating-point number][ieee754] into a lower order word (32-bit `integer`) and a higher order word (32-bit `integer`).
 
 ``` javascript
 var w = words( 3.14e201 );
@@ -31,7 +31,10 @@ The returned `array` contains two elements: a lower order word and a higher orde
 
 ``` javascript
 var low = w[ 0 ];
+// returns 2479577218
+
 var high = w[ 1 ];
+// returns 1774486211
 ```
 
 
