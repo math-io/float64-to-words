@@ -8,14 +8,14 @@ Words
 ## Installation
 
 ``` bash
-$ npm install math-float64-words
+$ npm install math-float64-to-words
 ```
 
 
 ## Usage
 
 ``` javascript
-var words = require( 'math-float64-words' );
+var words = require( 'math-float64-to-words' );
 ```
 
 #### words( x )
@@ -40,7 +40,7 @@ var high = w[ 1 ];
 ``` javascript
 var floor = require( 'math-floor' );
 var pow = require( 'math-power' );
-var words = require( 'math-float64-words' );
+var words = require( 'math-float64-to-words' );
 
 var frac;
 var exp;
@@ -53,7 +53,7 @@ for ( i = 0; i < 100; i++ ) {
 	exp = -floor( Math.random()*324 );
 	x = frac * pow( 10, exp );
 	w = words( x );
-	console.log( 'x: %d. lower: %d. upper: %d.', x, w[ 0 ], w[ 1 ] );
+	console.log( 'x: %d. lower: %d. higher: %d.', x, w[ 0 ], w[ 1 ] );
 }
 ```
 
@@ -121,23 +121,23 @@ $ make view-browser-tests
 Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 
 
-[npm-image]: http://img.shields.io/npm/v/math-float64-words.svg
-[npm-url]: https://npmjs.org/package/math-float64-words
+[npm-image]: http://img.shields.io/npm/v/math-float64-to-words.svg
+[npm-url]: https://npmjs.org/package/math-float64-to-words
 
-[build-image]: http://img.shields.io/travis/math-io/float64-words/master.svg
-[build-url]: https://travis-ci.org/math-io/float64-words
+[build-image]: http://img.shields.io/travis/math-io/float64-to-words/master.svg
+[build-url]: https://travis-ci.org/math-io/float64-to-words
 
-[coverage-image]: https://img.shields.io/codecov/c/github/math-io/float64-words/master.svg
-[coverage-url]: https://codecov.io/github/math-io/float64-words?branch=master
+[coverage-image]: https://img.shields.io/codecov/c/github/math-io/float64-to-words/master.svg
+[coverage-url]: https://codecov.io/github/math-io/float64-to-words?branch=master
 
-[dependencies-image]: http://img.shields.io/david/math-io/float64-words.svg
-[dependencies-url]: https://david-dm.org/math-io/float64-words
+[dependencies-image]: http://img.shields.io/david/math-io/float64-to-words.svg
+[dependencies-url]: https://david-dm.org/math-io/float64-to-words
 
-[dev-dependencies-image]: http://img.shields.io/david/dev/math-io/float64-words.svg
-[dev-dependencies-url]: https://david-dm.org/dev/math-io/float64-words
+[dev-dependencies-image]: http://img.shields.io/david/dev/math-io/float64-to-words.svg
+[dev-dependencies-url]: https://david-dm.org/dev/math-io/float64-to-words
 
-[github-issues-image]: http://img.shields.io/github/issues/math-io/float64-words.svg
-[github-issues-url]: https://github.com/math-io/float64-words/issues
+[github-issues-image]: http://img.shields.io/github/issues/math-io/float64-to-words.svg
+[github-issues-url]: https://github.com/math-io/float64-to-words/issues
 
 [tape]: https://github.com/substack/tape
 [istanbul]: https://github.com/gotwarlost/istanbul

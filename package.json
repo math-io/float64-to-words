@@ -1,5 +1,5 @@
 {
-  "name": "math-float64-words",
+  "name": "math-float64-to-words",
   "version": "0.0.0",
   "description": "Splits a floating-point number into a lower order word and a higher order word.",
   "author": {
@@ -23,7 +23,7 @@
   "main": "./lib",
   "repository": {
     "type": "git",
-    "url": "git://github.com/math-io/float64-words.git"
+    "url": "git://github.com/math-io/float64-to-words.git"
   },
   "keywords": [
     "math.io",
@@ -48,7 +48,7 @@
     "fraction"
   ],
   "bugs": {
-    "url": "https://github.com/math-io/float64-words/issues"
+    "url": "https://github.com/math-io/float64-to-words/issues"
   },
   "dependencies": {
     "utils-is-little-endian": "^1.0.0"
