@@ -2,7 +2,7 @@ Words
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url] [![Coverage Status][coverage-image]][coverage-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Splits a [double-precision floating-point number][ieee754] into a lower order word and a higher order word.
+> Splits a [double-precision floating-point number][ieee754] into a higher order word and a lower order word.
 
 
 ## Installation
@@ -20,21 +20,21 @@ var words = require( 'math-float64-to-words' );
 
 #### words( x )
 
-Splits a [double-precision floating-point number][ieee754] into a lower order word (32-bit `integer`) and a higher order word (32-bit `integer`).
+Splits a [double-precision floating-point number][ieee754] into a higher order word (32-bit `integer`) and a lower order word (32-bit `integer`).
 
 ``` javascript
 var w = words( 3.14e201 );
-// returns [ 2479577218, 1774486211 ]
+// returns [ 1774486211, 2479577218 ]
 ```
 
-The returned `array` contains two elements: a lower order word and a higher order word. The lower order word contains the least significant bits, while the higher order word contains the most significant bits, including the exponent and the sign bit.
+The returned `array` contains two elements: a higher order word and a lower order word. The lower order word contains the less significant bits, while the higher order word contains the more significant bits, which include the exponent and the sign bit.
 
 ``` javascript
-var low = w[ 0 ];
-// returns 2479577218
-
-var high = w[ 1 ];
+var high = w[ 0 ];
 // returns 1774486211
+
+var low = w[ 1 ];
+// returns 2479577218
 ```
 
 
@@ -56,7 +56,7 @@ for ( i = 0; i < 100; i++ ) {
 	exp = -floor( Math.random()*324 );
 	x = frac * pow( 10, exp );
 	w = words( x );
-	console.log( 'x: %d. lower: %d. higher: %d.', x, w[ 0 ], w[ 1 ] );
+	console.log( 'x: %d. higher: %d. lower: %d.', x, w[ 0 ], w[ 1 ] );
 }
 ```
 

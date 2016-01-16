@@ -15,5 +15,7 @@ for ( i = 0; i < 100; i++ ) {
 	exp = -floor( Math.random()*324 );
 	x = frac * pow( 10, exp );
 	w = words( x );
-	console.log( 'x: %d. lower: %d. higher: %d.', x, w[ 0 ], w[ 1 ] );
+	console.log( 'x: %d. higher: %d. lower: %d.', x, w[ 0 ], w[ 1 ] );
 }
+
+console.log( words( 15 ) );

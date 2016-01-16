@@ -1,7 +1,7 @@
 {
   "name": "math-float64-to-words",
   "version": "0.0.0",
-  "description": "Splits a floating-point number into a lower order word and a higher order word.",
+  "description": "Splits a floating-point number into a higher order word and a lower order word.",
   "author": {
     "name": "Athan Reines",
     "email": "kgryte@gmail.com"
@@ -56,6 +56,8 @@
   "devDependencies": {
     "browserify": "12.x.x",
     "codecov": "1.x.x",
+    "const-ninf-float64": "^1.0.0",
+    "const-pinf-float64": "^1.0.0",
     "istanbul": "^0.4.1",
     "jshint": "2.x.x",
     "jshint-stylish": "2.x.x",
@@ -66,7 +68,9 @@
     "proxyquireify": "^3.0.1",
     "tap-spec": "4.x.x",
     "tape": "4.x.x",
-    "testling": "1.x.x"
+    "testling": "1.x.x",
+    "utils-left-pad-string": "^1.0.1",
+    "utils-repeat-string": "^1.0.3"
   },
   "testling": {
     "files": [
