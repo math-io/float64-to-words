@@ -51,6 +51,7 @@ var w;
 var x;
 var i;
 
+// Generate random numbers and split into words...
 for ( i = 0; i < 100; i++ ) {
 	frac = Math.random() * 10;
 	exp = -floor( Math.random()*324 );
