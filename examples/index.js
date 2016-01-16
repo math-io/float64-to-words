@@ -17,5 +17,3 @@ for ( i = 0; i < 100; i++ ) {
 	w = words( x );
 	console.log( 'x: %d. higher: %d. lower: %d.', x, w[ 0 ], w[ 1 ] );
 }
-
-console.log( words( 15 ) );
