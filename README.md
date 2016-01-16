@@ -27,7 +27,7 @@ var w = words( 3.14e201 );
 // returns [ 1774486211, 2479577218 ]
 ```
 
-The returned `array` contains two elements: a higher order word and a lower order word. The lower order word contains the less significant bits, while the higher order word contains the more significant bits, which include the exponent and the sign bit.
+The returned `array` contains two elements: a higher order word and a lower order word. The lower order word contains the less significant bits, while the higher order word contains the more significant bits and includes the exponent and sign.
 
 ``` javascript
 var high = w[ 0 ];

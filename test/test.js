@@ -2,7 +2,7 @@
 
 // MODULES //
 
-var test = require( 'tape' );
+var tape = require( 'tape' );
 var pinf = require( 'const-pinf-float64' );
 var ninf = require( 'const-ninf-float64' );
 var lpad = require( 'utils-left-pad-string' );
@@ -13,12 +13,12 @@ var words = require( './../lib' );
 
 // TESTS //
 
-test( 'main export is a function', function test( t ) {
+tape( 'main export is a function', function test( t ) {
 	t.ok( typeof words === 'function', 'main export is a function' );
 	t.end();
 });
 
-test( 'if provided `NaN`, the sign bit may be either 0 or 1, the exponent must be all 1s, and the fraction cannot be all 0s (IEEE754-1985)', function test( t ) {
+tape( 'if provided `NaN`, the sign bit may be either 0 or 1, the exponent must be all 1s, and the fraction cannot be all 0s (IEEE754-1985)', function test( t ) {
 	var frac;
 	var high;
 	var low;
@@ -48,7 +48,7 @@ test( 'if provided `NaN`, the sign bit may be either 0 or 1, the exponent must b
 	t.end();
 });
 
-test( 'if provided `+infinity`, the higher order word corresponds to a sign of 0, all 1s in the exponent, and all 0s in the fraction, while the lower order word is all 0s (IEEE754-1985)', function test( t ) {
+tape( 'if provided `+infinity`, the higher order word corresponds to a sign of 0, all 1s in the exponent, and all 0s in the fraction, while the lower order word is all 0s (IEEE754-1985)', function test( t ) {
 	var high;
 	var low;
 	var w;
@@ -67,7 +67,7 @@ test( 'if provided `+infinity`, the higher order word corresponds to a sign of 0
 	t.end();
 });
 
-test( 'if provided `-infinity`, the higher order word corresponds to a sign of 1, all 1s in the exponent, and all 0s in the fraction, while the lower order word is all 0s (IEEE754-1985)', function test( t ) {
+tape( 'if provided `-infinity`, the higher order word corresponds to a sign of 1, all 1s in the exponent, and all 0s in the fraction, while the lower order word is all 0s (IEEE754-1985)', function test( t ) {
 	var high;
 	var low;
 	var w;
