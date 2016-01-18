@@ -32,7 +32,7 @@ tape( 'if little endian, the HIGH index is 1 and the LOW index is 0', function t
 
 tape( 'if big endian, the HIGH index is 0 and the LOW index is 1', function test( t ) {
 	var indices = proxyquire( './../lib/indices.js', {
-		'utils-is-little-endian': false
+		'utils-is-little-endian': 'beep' // a value other than `true`
 	});
 
 	t.equal( indices.HIGH, 0, 'HIGH equals 0' );
